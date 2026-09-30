@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduGenie - Gemini powered learning assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1 class="brand">EduGenie</h1>
+      <p class="tagline">Study help powered by Google Gemini</p>
+      <nav class="tools" role="tablist" aria-label="Learning tools" id="tools"></nav>
+    </aside>
+
+    <main class="workspace">
+      <header>
+        <h2 id="tool-title"></h2>
+        <p id="tool-hint" class="hint"></p>
+      </header>
+
+      <div class="input-area">
+        <label for="input" class="sr-only">Your input</label>
+        <textarea id="input" rows="6"></textarea>
+        <div class="actions">
+          <div id="level-wrap" class="level" hidden>
+            <label for="level">Your level</label>
+            <select id="level">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+          <button id="submit" type="button"></button>
+        </div>
+      </div>
+
+      <section id="result" class="page" aria-live="polite" hidden></section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

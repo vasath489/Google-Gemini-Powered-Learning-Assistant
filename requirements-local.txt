@@ -1,0 +1,4 @@
+# Optional: only needed if you set USE_LOCAL_MODEL=true (LaMini-Flan-T5 runs on your machine)
+transformers>=4.40
+torch>=2.2
+sentencepiece>=0.2
